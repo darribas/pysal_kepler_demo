@@ -1,4 +1,4 @@
-FROM darribas/gds:2.0
+FROM darribas/gds_py:2.0
 
 RUN pip install keplergl
 
@@ -14,3 +14,6 @@ COPY ./config_lisa.json ${HOME}/config_lisa.json
 USER root
 RUN chown -R ${NB_UID} ${HOME}
 USER ${NB_USER}
+
+# Start-up
+CMD ["jupyter", "notebook"]
