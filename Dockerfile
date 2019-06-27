@@ -16,4 +16,4 @@ RUN chown -R ${NB_UID} ${HOME}
 USER ${NB_USER}
 
 # Start-up
-CMD ["jupyter", "notebook", "${HOME}/pysal_kepler.ipynb"]
+CMD ["jupyter", "notebook"]
